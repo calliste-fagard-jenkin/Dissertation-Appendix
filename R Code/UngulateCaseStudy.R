@@ -3,7 +3,7 @@ source('piecemealFunctions.R')
 source('PlottingFunctions.R')
 library(xtable)
 
-# Taken from 2.6 of Ellner, Childs & Rees, this file tries to use various
+# Replicating 2.6 of Ellner, Childs & Rees, this file tries to use various
 # pieces of other code to simulate a case study of Ovis Aries, a sheep found
 # in Scotland. It was preferred over the case study in chapter 2.5 as the life
 # cycle and reproductive behaviour is closer to that of the Guppy population we

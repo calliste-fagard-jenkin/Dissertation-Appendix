@@ -1,0 +1,3 @@
+\contentsline {algorithm}{\numberline {1}{\ignorespaces Particle Filter for estimating $\qopname \relax m{Pr}(\boldsymbol {Y}_{1:T}, \boldsymbol {X}_{1:T}| \boldsymbol {\theta })$\relax }}{16}{algorithm.1}
+\contentsline {algorithm}{\numberline {2}{\ignorespaces Particle Filter for estimating $\qopname \relax o{log}\qopname \relax m{Pr}(\boldsymbol {Y}_{1:T}, \boldsymbol {X}_{1:T}| \boldsymbol {\theta })$\relax }}{17}{algorithm.2}
+\contentsline {algorithm}{\numberline {3}{\ignorespaces Particle MCMC for obtaining samples from the posterior distribution\relax }}{18}{algorithm.3}

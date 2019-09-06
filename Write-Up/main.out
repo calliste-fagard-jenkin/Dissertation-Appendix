@@ -1,0 +1,26 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Piecemeal Solving}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{The Individual Based Model}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Specification of Vital Rate Functions}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Fitting the Vital Rate Functions}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.4}{Growth Rate and Size Distributions}{section.2}% 6
+\BOOKMARK [1][-]{section.3}{State Space Model}{}% 7
+\BOOKMARK [2][-]{subsection.3.1}{Introduction}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.2}{Model Specification - Sampling From the State Space}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.3}{Model Specification - Our Observation Model}{section.3}% 10
+\BOOKMARK [2][-]{subsection.3.4}{Model Specification - Our Initial State Model}{section.3}% 11
+\BOOKMARK [2][-]{subsection.3.5}{Particle Markov Chain Monte Carlo}{section.3}% 12
+\BOOKMARK [1][-]{section.4}{Revisiting Ovis aries}{}% 13
+\BOOKMARK [2][-]{subsection.4.1}{Simulating our Data}{section.4}% 14
+\BOOKMARK [2][-]{subsection.4.2}{Determining PMCMC settings}{section.4}% 15
+\BOOKMARK [2][-]{subsection.4.3}{Running the PMCMC Chains}{section.4}% 16
+\BOOKMARK [2][-]{subsection.4.4}{Results}{section.4}% 17
+\BOOKMARK [1][-]{section.5}{Ovis aries, real data}{}% 18
+\BOOKMARK [2][-]{subsection.5.1}{Data and PMCMC setup}{section.5}% 19
+\BOOKMARK [2][-]{subsection.5.2}{Analysis}{section.5}% 20
+\BOOKMARK [1][-]{section.6}{Discussion}{}% 21
+\BOOKMARK [2][-]{subsection.6.1}{Model extensions and revisions}{section.6}% 22
+\BOOKMARK [2][-]{subsection.6.2}{Suitability of Metropolis-Hastings, and the SSM parameterisation}{section.6}% 23
+\BOOKMARK [2][-]{subsection.6.3}{Comments on data}{section.6}% 24
+\BOOKMARK [2][-]{subsection.6.4}{Limitations, and further work}{section.6}% 25
+\BOOKMARK [1][-]{section.7}{Conclusion}{}% 26
