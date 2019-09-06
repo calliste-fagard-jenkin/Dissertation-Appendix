@@ -430,31 +430,30 @@ startValues %<>% unlist
 
 # setup for the loop:
 bVals <- c(10, 25, 50, 100, 150, 200, 250, 500)
-simNum <- 20
+simNum <- 50
 results <- matrix(NA, nrow = length(bVals), ncol = simNum)
 IPMLTP.graph <- IPMLTP
 
 # running the simulation for estimate MC variance:
-set.seed(201908)
 for (i in 1:length(bVals)){
   IPMLTP.graph$b <- bVals[i]
   for (j in 1:simNum){
-    results[i, j] <- logTargetIPM(startValues, logTargetPars = IPMLTP.graph)
+    results[i, j] <- logTargetIPM(startValues, logTargetPars = IPMLTP.graph,
+                                  returnLL = T)
   }
   cat("Loop for b =",bVals[i],"has been completed\n")
 }
 
 results %>% apply(1, sd) %>% plot(x = bVals, xlab = "Number of particles", 
-                                  ylab = "Standard deviation of log posterior",
+                                  ylab = "Standard deviation of log likelihood",
                                   col = "purple", pch = 16)
 
 lines(x = bVals, y = results %>% apply(1, sd), col = "purple", lwd = 2)
 
 #################### ESTIMATE SD OF LOG LIKELIHOOD IN PARALLEL #################
 IPMLTP.copy <- IPMLTP
-set.seed(101010)
-IPMLTP.copy$b <- 440
-llSD <-  rep(NA, 10000)
+IPMLTP.copy$b <- 500
+llSD <-  rep(NA, 100)
 cl<-makeCluster(4)
 registerDoParallel(cl)
 clusterExport(cl, c("%<>%", "%>%", "detectionNumObs", "evalPriors", "multnomMu",

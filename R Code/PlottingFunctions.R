@@ -4,12 +4,19 @@ plot.IterationMatrix <- function(IM, L, U, n=5, cex=1, ...){
   
   # absolutely no idea how to get the axis text to change size, cex.axis 
   # doesn't work:
-  xlist=list(at = seq(1, ncol(IM), l = n), labels = seq(L, U, l = n), cex=cex)
-  ylist=list(at = seq(1, ncol(IM), l = n), labels = seq(U, L, l = n), cex=cex)
-  IM %>% `class<-`('matrix') %>% rotate %>%
-    levelplot(scale=list(x=xlist, y=ylist),
-              xlab = 'Size at previous census / size of parent',
-              ylab='Size at current census', main='IPM Kernel', ...)
+  xlist=list(at = seq(1, ncol(IM), l = n),
+             labels = seq(L, U, l = n) %>% round(digits = 1), cex=cex)
+  
+  ylist=list(at = seq(1, ncol(IM), l = n),
+             labels = seq(U, L, l = n) %>% round(digits = 1) %>% rev, cex=cex)
+  
+  IM <- IM[nrow(IM):1,]
+  IM %<>% `class<-`('matrix') %>% rotate
+  
+  
+  levelplot(IM, scale=list(x=xlist, y=ylist),
+            xlab = 'Size at previous census / size of parent',
+            ylab='Size at current census', main='IPM Kernel', ...)
 }
 
 rotate <- function(M) M %>% apply(2, rev) %>% t
